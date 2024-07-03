@@ -21,36 +21,71 @@ function hantei() {
   let yoso = 4;
   
   // 課題3-1: 正解判定する
+  let kasiu1 = document.querySelector('span#kaisu');
+  let answer1 = document.querySelector('span#answer');
+  let result1 = document.querySelector('p#result');
   kaisu = kaisu + 1; 
     if (kaisu > 4) {
-        console.log(kaisu + "回目の予想: " + yoso);　console.log("答えは " + kotae + " でした。すでにゲームは終わっています。")
+        console.log(kaisu + "回目の予想: " + yoso); 
+        console.log("答えは " + kotae + " でした。すでにゲームは終わっています。");
+        result1.textContent = "答えは " + kotae + " でした。すでにゲームは終わっています。";
+        kasiu1.textContent = kaisu;
+        answer1.textContent = yoso;
     }
     else if (kotae === yoso) {
-            console.log(kaisu + "回目の予想: " + yoso); console.log("正解です。おめでとう!");
-            kaisu = kaisu + 3;
+            console.log(kaisu + "回目の予想: " + yoso); 
+            console.log("正解です。おめでとう!");
+            result1.textContent = "正解です。おめでとう!";
+            kasiu1.textContent = kaisu;
+            answer1.textContent = yoso;
     } 
     else if (kotae < yoso) {
         if (kaisu < 3) {
-            console.log(kaisu + "回目の予想: " + yoso); console.log("まちがい。答えはもっと小さいですよ。");
+            console.log(kaisu + "回目の予想: " + yoso); 
+            console.log("まちがい。答えはもっと小さいですよ。");
+            result1.textContent = "まちがい。答えはもっと小さいですよ。";
+            kasiu1.textContent = kaisu;
+            answer1.textContent = yoso;
         }
         else if (kaisu === 3){
-            console.log(kaisu + "回目の予想: " + yoso);　console.log("まちがい。残念でした答えは " + kotae + " です。")
+            console.log(kaisu + "回目の予想: " + yoso); 
+            console.log("まちがい。残念でした答えは " + kotae + " です。");
+            result1.textContent = "まちがい。残念でした答えは " + kotae + " です。";
+            kasiu1.textContent = kaisu;
+            answer1.textContent = yoso;
         }
         else {
-            console.log(kaisu + "回目の予想: " + yoso);　console.log("答えは " + kotae + " でした。すでにゲームは終わっています。")
+            console.log(kaisu + "回目の予想: " + yoso); 
+            console.log("答えは " + kotae + " でした。すでにゲームは終わっています。");
+            result1.textContent = "答えは " + kotae + " でした。すでにゲームは終わっています。";
+            kasiu1.textContent = kaisu;
+            answer1.textContent = yoso;
         }
     } 
     else if (kotae > yoso) {
         if (kaisu < 3) {
-            console.log(kaisu + "回目の予想: " + yoso); console.log("まちがい。答えはもっと大きいですよ。");
+            console.log(kaisu + "回目の予想: " + yoso); 
+            console.log("まちがい。答えはもっと大きいですよ。");
+            result1.textContent = "まちがい。答えはもっと大きいですよ。";
+            kasiu1.textContent = kaisu;
+            answer1.textContent = yoso;
         }
         else if (kaisu === 3){
-            console.log(kaisu + "回目の予想: " + yoso);　console.log("まちがい。残念でした答えは " + kotae + " です。")
+            console.log(kaisu + "回目の予想: " + yoso); 
+            console.log("まちがい。残念でした答えは " + kotae + " です。");
+            result1.textContent = "まちがい。残念でした答えは " + kotae + " です。";
+            kasiu1.textContent = kaisu;
+            answer1.textContent = yoso;
         }
         else {
-            console.log(kaisu + "回目の予想: " + yoso);　console.log("答えは " + kotae + " でした。すでにゲームは終わっています。")
+            console.log(kaisu + "回目の予想: " + yoso); 
+            console.log("答えは " + kotae + " でした。すでにゲームは終わっています。");
+            result1.textContent = "答えは " + kotae + " でした。すでにゲームは終わっています。";
+            kasiu1.textContent = kaisu;
+            answer1.textContent = yoso;
         }
     } 
+
 
 
   // kotae と yoso が一致するかどうか調べて結果を出力

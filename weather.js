@@ -46,7 +46,20 @@ let data = {
 };
 
 ////////// 課題3-2 ここからプログラムを書こう
-console.log("都市 = " + data.name);
-console.log("最高気温 = " + data.main.temp_max);
-console.log("最低気温 = " + data.main.temp_min);
-console.log("天気 = " + data.weather[0].description); 
+let result1 = document.querySelector('div#result');
+let p3 = document.createElement('p');
+p3.textContent = "天気 = " + data.weather[0].description; 
+result1.insertAdjacentElement('afterend', p3);
+let p2 = document.createElement('p');
+p2.textContent = "最低気温 = " + data.main.temp_min;
+result1.insertAdjacentElement('afterend', p2);
+let p1 = document.createElement('p');
+p1.textContent = "最高気温 = " + data.main.temp_max;
+result1.insertAdjacentElement('afterend', p1);
+let p = document.createElement('p');
+p.textContent = "都市 = " + data.name;
+result1.insertAdjacentElement('afterend', p);
+
+
+
+
