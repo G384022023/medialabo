@@ -46,19 +46,40 @@ let data = {
 };
 
 ////////// 課題3-2 ここからプログラムを書こう
-let result1 = document.querySelector('div#result');
-let p3 = document.createElement('p');
-p3.textContent = "天気 = " + data.weather[0].description; 
-result1.insertAdjacentElement('afterend', p3);
-let p2 = document.createElement('p');
-p2.textContent = "最低気温 = " + data.main.temp_min;
-result1.insertAdjacentElement('afterend', p2);
-let p1 = document.createElement('p');
-p1.textContent = "最高気温 = " + data.main.temp_max;
-result1.insertAdjacentElement('afterend', p1);
-let p = document.createElement('p');
-p.textContent = "都市 = " + data.name;
-result1.insertAdjacentElement('afterend', p);
+//let result1 = document.querySelector('div#result');
+//let p3 = document.createElement('p');
+//p3.textContent = "天気 = " + data.weather[0].description; 
+//result1.insertAdjacentElement('afterend', p3);
+//let p2 = document.createElement('p');
+//p2.textContent = "最低気温 = " + data.main.temp_min;
+//result1.insertAdjacentElement('afterend', p2);
+//let p1 = document.createElement('p');
+///p1.textContent = "最高気温 = " + data.main.temp_max;
+//result1.insertAdjacentElement('afterend', p1);
+//let p = document.createElement('p');
+//p.textContent = "都市 = " + data.name;
+//result1.insertAdjacentElement('afterend', p);
+
+
+let a = document.querySelector('button#serch');
+a.addEventListener('click', addconsole);
+
+function addconsole() {
+  let bs = document.querySelectorAll('input[name = "toshimei"]');
+  let cs = document.querySelectorAll('input[name = "item"]');
+  let n = 1;
+  for (let b of bs) {
+    if (b.checked) {
+      console.log("都市名: " + b.value);
+    }
+  }
+  for (let c of cs) {
+    if (c.checked) {
+      console.log("必要項目" + n + "つ目: " + c.value);
+      n = n + 1;
+    }
+  }
+}
 
 
 

@@ -7,7 +7,7 @@
         <script src="weather.js" defer></script>
     </head>
     <body>
-        <h2>世界の天気 (検索結果1件)</h2>
+        <h1>世界の天気 (検索結果1件)</h1>
         <!-- <table>
             <thead>
                 <tr>
@@ -38,8 +38,75 @@
                 <td>9.94</td>
                 <td>9.94</td>
                 <td>曇りがち</td>
-            </tr>-->
-        </table>
-        <div id="result"></div>
+            </tr>
+        </table>-->
+        
+        <h2>都市名</h2>
+        <p>
+            <input type="radio" name="toshimei" id="Cairo" value="Cairo">
+            <label for="Cairo">Cairo </label>
+
+            <input type="radio" name="toshimei" id="Moscow" value="Moscow">
+            <label for="Moscow">Moscow </label>
+
+            <input type="radio" name="toshimei" id="Johannesburg" value="Johannesburg">
+            <label for="Johannesburg">Johannesburg </label>
+
+            <input type="radio" name="toshimei" id="Beijing" value="Beijing">
+            <label for="Beijing">Beijing </label>
+
+            <input type="radio" name="toshimei" id="Tokyo" value="Tokyo">
+            <label for="Tokyo">Tokyo </label>
+
+            <input type="radio" name="toshimei" id="Singapore" value="Singapore">
+            <label for="Singapore">Singapore </label>
+
+            <input type="radio" name="toshimei" id="Sydney" value="Sydney">
+            <label for="Sydney">Sydney </label>
+
+            <input type="radio" name="toshimei" id="London" value="London">
+            <label for="London">London </label>
+
+            <input type="radio" name="toshimei" id="Paris" value="Paris">
+            <label for="Paris">Paris </label>
+
+            <input type="radio" name="toshimei" id="Rio de Janeiro" value="Rio de Janeiro">
+            <label for="Rio de Janeiro">Rio de Janeiro </label>
+        
+            <input type="radio" name="toshimei" id="New York" value="New York">
+            <label for="New York">New York </label>
+
+            <input type="radio" name="toshimei" id="Los Angeles" value="Los Angeles">
+            <label for="Los Angeles">Los Angeles </label>
+        </p>
+
+        <h2>必要項目</h2>
+        <p>
+            <input type="checkbox" name="item" id="経度" value="経度">
+            <label for="経度">経度</label>
+            
+            <input type="checkbox" name="item" id="緯度" value="緯度">
+            <label for="緯度">緯度</label>
+
+            <input type="checkbox" name="item" id="天気" value="天気">
+            <label for="天気">天気</label>
+
+            <input type="checkbox" name="item" id="最低気温" value="最低気温">
+            <label for="最低気温">最低気温</label>
+
+            <input type="checkbox" name="item" id="最高気温" value="最高気温">
+            <label for="最高気温">最高気温</label>
+
+            <input type="checkbox" name="item" id="湿度" value="湿度">
+            <label for="湿度">湿度</label>
+
+            <input type="checkbox" name="item" id="風速" value="風速">
+            <label for="風速">風速</label>
+
+            <input type="checkbox" name="item" id="風向" value="風向">
+            <label for="風向">風向</label>
+        </p>
+        <p><button id="serch">検索</button></p>
+        <!--<div id="result"></div>-->
     </body>
 </html>

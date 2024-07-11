@@ -9,35 +9,35 @@ let kaisu = 0;
 // 予想を4回実行する
 // 将来以下の hantei(); の4回の呼び出しを全て削除する
 // 代わりにここでは，ボタンを押したら hantei() を呼び出すイベント処理をする
-hantei();
-hantei();
-hantei();
-hantei();
+let b = document.querySelector('#print');
+b.addEventListener('click', hantei);
 
 
 // ボタンを押した後の処理をする関数 hantei() の定義
 function hantei() {
   // 将来ここでは 4 ではなくテキストボックスに指定された数値を yoso に代入する
-  let yoso = 4;
+  let y = document.querySelector('input[name="number"]');
+  let yoso = y.value;
   
   // 課題3-1: 正解判定する
   let kasiu1 = document.querySelector('span#kaisu');
   let answer1 = document.querySelector('span#answer');
   let result1 = document.querySelector('p#result');
   kaisu = kaisu + 1; 
-    if (kaisu > 4) {
+    if (kaisu > 3) {
         console.log(kaisu + "回目の予想: " + yoso); 
         console.log("答えは " + kotae + " でした。すでにゲームは終わっています。");
         result1.textContent = "答えは " + kotae + " でした。すでにゲームは終わっています。";
         kasiu1.textContent = kaisu;
         answer1.textContent = yoso;
     }
-    else if (kotae === yoso) {
+    else if (kotae == yoso) {
             console.log(kaisu + "回目の予想: " + yoso); 
             console.log("正解です。おめでとう!");
             result1.textContent = "正解です。おめでとう!";
             kasiu1.textContent = kaisu;
             answer1.textContent = yoso;
+            kaisu = kaisu + 2;
     } 
     else if (kotae < yoso) {
         if (kaisu < 3) {
@@ -47,7 +47,7 @@ function hantei() {
             kasiu1.textContent = kaisu;
             answer1.textContent = yoso;
         }
-        else if (kaisu === 3){
+        else if (kaisu == 3){
             console.log(kaisu + "回目の予想: " + yoso); 
             console.log("まちがい。残念でした答えは " + kotae + " です。");
             result1.textContent = "まちがい。残念でした答えは " + kotae + " です。";
@@ -70,7 +70,7 @@ function hantei() {
             kasiu1.textContent = kaisu;
             answer1.textContent = yoso;
         }
-        else if (kaisu === 3){
+        else if (kaisu == 3){
             console.log(kaisu + "回目の予想: " + yoso); 
             console.log("まちがい。残念でした答えは " + kotae + " です。");
             result1.textContent = "まちがい。残念でした答えは " + kotae + " です。";
