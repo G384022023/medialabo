@@ -61,7 +61,7 @@ function print(data) {
         ul.insertAdjacentElement("beforeend", p2);
       }
       if (c.value == "天気") {
-        p3.textContent = "天気: " + data.weather.description;
+        p3.textContent = "天気: " + data.weather[0].description;
         ul.insertAdjacentElement("beforeend", p3);
       }
       if (c.value == "最低気温") {
